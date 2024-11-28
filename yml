@@ -1,0 +1,16 @@
+name: Windows Self-Hosted Runner Example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: [self-hosted, windows]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Run on Windows
+      run: |
+        echo "Running on Windows"
+        echo "This is my custom runner"
